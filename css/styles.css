@@ -410,12 +410,12 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 @media (min-width: 400px) {
   .gridrow {
-    width: 400px;
+    width: 90%;
   }
 }
 @media (min-width: 800px) {
   .gridrow {
-    width: 800px;
+    width: 100%;
   }
 }
 @media (min-width: 1200px) {
@@ -915,6 +915,55 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
         }
     }
 }*/
+/*
+@mixin mx-header-logo($gridwidth, $gridgutter){
+    @if($gridwidth == $gridwidth-l0){
+        font-size: $gridgutter * 3;
+    }
+
+    // De 400px para cima
+    @if($gridwidth == $gridwidth-l1){
+        @media only screen and (min-width: $gridwidth){
+            font-size: $gridgutter * 3;
+        }
+    } 
+
+    @if($gridwidth == $gridwidth-l2){
+        @media only screen and (min-width: $gridwidth){
+            font-size: $gridgutter * 2;
+        }
+    }
+
+    @if($gridwidth == $gridwidth-l3){
+        @media only screen and (min-width: $gridwidth){
+            font-size: $gridgutter;
+        }
+    }
+
+}*/
+/*@mixin mx-header-h1($gridwidth, $gridgutter){
+    @if($gridwidth == $gridwidth-l0){
+        font-size: 73px;
+    } 
+
+    @if($gridwidth == $gridwidth-l1){
+        @media only screen and (min-width: $gridwidth){
+            font-size: $gridgutter * 5;
+        }
+    }
+
+    @if($gridwidth == $gridwidth-l2){
+        @media only screen and (min-width: $gridwidth){
+            font-size: $gridgutter * 5;
+        }
+    }
+
+    @if($gridwidth == $gridwidth-l3){
+        @media only screen and (min-width: $gridwidth){
+            font-size: $gridgutter * 5;
+        }
+    }
+}*/
 body > header {
   height: 100vh;
   background-image: url(../imgs/header.jpg);
@@ -927,23 +976,7 @@ body > header nav a {
   color: #000;
 }
 body > header nav a.logo {
-  font-size: 30px;
   font-family: "Montserrat", sans serif;
-}
-@media only screen and (min-width: 400px) {
-  body > header nav a.logo {
-    font-size: 30px;
-  }
-}
-@media only screen and (min-width: 800px) {
-  body > header nav a.logo {
-    font-size: 40px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  body > header nav a.logo {
-    font-size: 30px;
-  }
 }
 body > header nav a.hamburgermenu {
   font-size: 24px;
@@ -962,22 +995,8 @@ body > header .textoverlay {
 body > header .textoverlay h1 {
   font-size: 73px;
 }
-@media only screen and (min-width: 400px) {
-  body > header .textoverlay h1 {
-    font-size: 50px;
-  }
-}
-@media only screen and (min-width: 800px) {
-  body > header .textoverlay h1 {
-    font-size: 100px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  body > header .textoverlay h1 {
-    font-size: 150px;
-  }
-}
 body > header .textoverlay h3 {
+  font-size: 28px;
   font-size: 28px;
 }
 @media only screen and (min-width: 400px) {
@@ -1005,13 +1024,28 @@ body > header nav {
 body > header nav a {
   line-height: 10px;
 }
+body > header nav a.logo {
+  font-size: 30px;
+}
 
 @media only screen and (min-width: 400px) {
   body > header nav {
-    padding-top: 15px;
+    padding-top: 60px;
   }
   body > header nav a {
     line-height: 10px;
+  }
+  body > header nav a.logo {
+    font-size: 50px;
+  }
+  body > header nav a.hamburgermenu {
+    font-size: 40px;
+  }
+  body > header .textoverlay h1 {
+    font-size: 8.09rem;
+  }
+  body > header .textoverlay h3 {
+    font-size: 3.236rem;
   }
 }
 @media only screen and (min-width: 800px) {
@@ -1021,6 +1055,12 @@ body > header nav a {
   body > header nav a {
     line-height: 20px;
   }
+  body > header nav a.logo {
+    font-size: 100px;
+  }
+  body > header .textoverlay h1 {
+    font-size: 8.09rem;
+  }
 }
 @media only screen and (min-width: 1200px) {
   body > header nav {
@@ -1029,7 +1069,169 @@ body > header nav a {
   body > header nav a {
     line-height: 30px;
   }
+  body > header nav a.logo {
+    font-size: 30px;
+  }
+  body > header .textoverlay h1 {
+    font-size: 150px;
+  }
 }
+/*@mixin mx-services-h3($gridwidth, $gridgutter){
+    @if($gridwidth == $gridwidth-l0){
+            #services{
+                .serviceslist{
+                    H3{
+                        font-size: 30px;
+                    } 
+                }
+
+            }
+    }
+
+
+    @if($gridwidth == $gridwidth-l1){
+        @media only screen and (min-width: $gridwidth){
+            #services{
+                .serviceslist{
+                    H3{
+                        font-size: 24px;
+                    } 
+                }
+            }
+        }
+    } 
+
+    @if($gridwidth == $gridwidth-l2){
+        @media only screen and (min-width: $gridwidth){
+            #services{
+                .serviceslist{
+                    H3{
+                        font-size: 24px;
+                    } 
+                }
+            }
+        }
+    } 
+
+    @if($gridwidth == $gridwidth-l3){
+        @media only screen and (min-width: $gridwidth){
+            #services{
+                .serviceslist{
+                    H3{
+                        font-size: 24px;
+                    } 
+                }
+            }
+        }
+    } 
+}*/
+/*@mixin mx-services-iconz($gridwidth, $gridgutter){
+
+     @if($gridwidth == $gridwidth-l0){
+            #services{
+                .serviceslist{
+                    .iconz{
+                        font-size: 112px;
+                    } 
+                }
+
+            }
+    }  
+
+    @if($gridwidth == $gridwidth-l1){
+        @media only screen and (min-width: $gridwidth){
+            #services{
+                .serviceslist{
+                    .iconz{
+                        font-size: $gridgutter * 2;
+                    } 
+                }
+
+            }
+
+        }
+    } 
+
+    @if($gridwidth == $gridwidth-l2){
+        @media only screen and (min-width: $gridwidth){
+            #services{
+                .serviceslist{
+                    .iconz{
+                        font-size: $gridgutter * 2;
+                    } 
+                }
+
+            }
+
+        }
+    } 
+
+    @if($gridwidth == $gridwidth-l3){
+        @media only screen and (min-width: $gridwidth){
+            #services{
+                .serviceslist{
+                    .iconz{
+                        font-size: 64px;
+                    } 
+                }
+
+            }
+
+        }
+    } 
+}*/
+/*@mixin mx-services-serviceslist($gridwidth, $gridgutter){
+
+    @if($gridwidth == $gridwidth-l0){
+           #services{
+               .serviceslist{
+                    margin-top: $gridgutter * 3;
+                    p{
+                        font-size: 18px;
+                        text-align: center;
+                       //line-height: 23px;
+                    }
+               }
+
+           }
+   }  
+
+   @if($gridwidth == $gridwidth-l1){
+       @media only screen and (min-width: $gridwidth){
+           #services{
+               .serviceslist{
+                    margin-top: $gridgutter * 3;
+               }
+
+           }
+
+       }
+   } 
+
+   @if($gridwidth == $gridwidth-l2){
+       @media only screen and (min-width: $gridwidth){
+           #services{
+               .serviceslist{
+                    margin-top: $gridgutter * 3; 
+               }
+
+           }
+
+       }
+   } 
+
+   @if($gridwidth == $gridwidth-l3){
+       @media only screen and (min-width: $gridwidth){
+           #services{
+               .serviceslist{
+                    margin-top: $gridgutter * 3;
+               }
+
+           }
+
+       }
+   } 
+}*/
 .aboutline1 {
   position: relative;
   z-index: 2;
@@ -1055,13 +1257,39 @@ body > header nav a {
 #services H2 {
   font-size: 56px;
 }
+#services .serviceslist {
+  margin-top: 30px;
+}
+#services .serviceslist .iconz {
+  font-size: 112px;
+}
+#services .serviceslist H3 {
+  font-size: 30px;
+}
+#services .serviceslist p {
+  font-size: 18px;
+  text-align: center;
+}
 
 @media only screen and (min-width: 400px) {
   #services {
-    margin-top: 0px;
+    margin-top: 140px;
   }
   #services H2 {
-    font-size: 30px;
+    font-size: 4.854rem;
+  }
+  #services .serviceslist {
+    margin-top: 30px;
+  }
+  #services .serviceslist .iconz {
+    font-size: 6.472rem;
+  }
+  #services .serviceslist H3 {
+    font-size: 2.427rem;
+  }
+  #services .serviceslist p {
+    font-size: 1.618rem;
+    text-align: center;
   }
 }
 @media only screen and (min-width: 800px) {
@@ -1069,7 +1297,17 @@ body > header nav a {
     margin-top: 0px;
   }
   #services H2 {
-    font-size: 60px;
+    font-size: 4.854rem;
+  }
+  #services .serviceslist .iconz {
+    font-size: 6.472rem;
+  }
+  #services .serviceslist H3 {
+    font-size: 2.427rem;
+  }
+  #services .serviceslist p {
+    font-size: 1.618rem;
+    text-align: center;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -1079,43 +1317,15 @@ body > header nav a {
   #services H2 {
     font-size: 90px;
   }
-}
-#services .serviceslist H3 {
-  font-size: 30px;
-}
-
-@media only screen and (min-width: 400px) {
-  #services .serviceslist H3 {
-    font-size: 24px;
-  }
-}
-@media only screen and (min-width: 800px) {
-  #services .serviceslist H3 {
-    font-size: 24px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  #services .serviceslist H3 {
-    font-size: 24px;
-  }
-}
-#services .serviceslist .iconz {
-  font-size: 112px;
-}
-
-@media only screen and (min-width: 400px) {
-  #services .serviceslist .iconz {
-    font-size: 20px;
-  }
-}
-@media only screen and (min-width: 800px) {
-  #services .serviceslist .iconz {
-    font-size: 40px;
-  }
-}
-@media only screen and (min-width: 1200px) {
   #services .serviceslist .iconz {
     font-size: 64px;
+  }
+  #services .serviceslist H3 {
+    font-size: 24px;
+  }
+  #services .serviceslist p {
+    font-size: 18px;
+    text-align: center;
   }
 }
 #about .aboutline2 {
@@ -1163,7 +1373,7 @@ body > header nav a {
 
 @media only screen and (min-width: 400px) {
   #about .aboutline1 h4 {
-    font-size: 36px;
+    font-size: 3.236rem;
     margin-bottom: 60px;
   }
 }
@@ -1179,14 +1389,52 @@ body > header nav a {
     margin-bottom: 60px;
   }
 }
-#services .serviceslist {
-  margin-top: 30px;
-}
-#services .serviceslist p {
-  font-size: 18px;
-  text-align: center;
-}
+/*@mixin mx-clients-h2($gridwidth, $gridgutter){
 
+    @if($gridwidth == $gridwidth-l0){
+        //@media only screen and (max-width: $gridwidth){
+            #clients{
+                H2{
+                    font-size: 56px;
+                }
+            }
+        //}
+    } 
+
+    // De 400px para cima
+    @if($gridwidth == $gridwidth-l1){
+        @media only screen and (min-width: $gridwidth){
+            #clients{
+                H2{
+                    font-size: $gridgutter * 3;
+                }
+            }
+        }
+    }    
+
+    // De 800px para cima
+    @if($gridwidth == $gridwidth-l2){
+        @media only screen and (min-width: $gridwidth){
+            #clients{
+                H2{
+                    font-size: $gridgutter * 3;
+                }
+            }
+        }
+    }
+
+    // De 1200px para cima
+    @if($gridwidth == $gridwidth-l3){
+        @media only screen and (min-width: $gridwidth){
+            #clients{
+                H2{
+                    font-size: $gridgutter * 3;
+                }
+            }
+        }
+    }
+
+}*/
 .imggrid {
   margin-top: 40px;
 }
@@ -1220,6 +1468,9 @@ body > header nav a {
 #clients {
   margin-top: 40px;
 }
+#clients H2 {
+  font-size: 56px;
+}
 
 .clientslist {
   margin-top: 20px;
@@ -1231,6 +1482,9 @@ body > header nav a {
 @media only screen and (min-width: 400px) {
   #clients {
     margin-top: 40px;
+  }
+  #clients H2 {
+    font-size: 4.854rem;
   }
 
   .clientslist {
@@ -1244,6 +1498,9 @@ body > header nav a {
   #clients {
     margin-top: 80px;
   }
+  #clients H2 {
+    font-size: 4.854rem;
+  }
 
   .clientslist {
     margin-top: 40px;
@@ -1256,31 +1513,15 @@ body > header nav a {
   #clients {
     margin-top: 120px;
   }
+  #clients H2 {
+    font-size: 90px;
+  }
 
   .clientslist {
     margin-top: 60px;
   }
   .clientslist img {
     padding: 15px;
-  }
-}
-#clients H2 {
-  font-size: 56px;
-}
-
-@media only screen and (min-width: 400px) {
-  #clients H2 {
-    font-size: 30px;
-  }
-}
-@media only screen and (min-width: 800px) {
-  #clients H2 {
-    font-size: 60px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  #clients H2 {
-    font-size: 90px;
   }
 }
 #contacts {
