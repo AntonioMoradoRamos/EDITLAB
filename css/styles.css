@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* ******* EXERCÍCIO DESKTOP ******* */
 @import url(https://fonts.googleapis.com/css?family=Montserrat:700|Muli:400);
-.animate, footer a, #clients .clientslist img {
+.animate, footer a, #contacts > .col4BP1.formcontainer .form form button, #clients .clientslist img {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
@@ -47,7 +47,7 @@
   color: #F3F3F3;
 }
 
-.white {
+.white, #contacts > .col4BP1.formcontainer .form form button {
   color: #FFF;
 }
 
@@ -55,6 +55,15 @@
   display: block;
   width: 100%;
   height: auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.floatLeft {
+  float: left;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -342,6 +351,46 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   font-family: "Montserrat", sans serif;
 }
 
+/*@mixin mx-gridrow($vGridwidth){
+
+
+    @if($vGridwidth == $gridwidth-l0){
+        .gridrow{
+            width: $vGridwidth;
+            margin: 0 auto;
+        }
+    }
+
+   // De 400px para cima
+    @if($vGridwidth == $gridwidth-l1){
+        @media only screen and (min-width: $vGridwidth){
+            .gridrow{
+                width: $vGridwidth;
+                margin: 0 auto;
+            }
+        }
+    }    
+
+    // De 800px para cima
+    @if($vGridwidth == $gridwidth-l2){
+        @media only screen and (min-width: $vGridwidth){
+            .gridrow{
+                width: $vGridwidth;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    // De 1200px para cima
+    @if($vGridwidth == $gridwidth-l3){
+        @media only screen and (min-width: $vGridwidth){
+            .gridrow{
+                width: $vGridwidth;
+                margin: 0 auto;
+            }
+        }
+    }
+}*/
 .gridrowfull {
   width: 100%;
 }
@@ -351,33 +400,58 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     width: $gridwidth;
     margin: 0 auto;
 }*/
+/*@include mx-gridrow($gridwidth-l0);
+@include mx-gridrow($gridwidth-l1);
+@include mx-gridrow($gridwidth-l2);
+@include mx-gridrow($gridwidth-l3);*/
 .gridrow {
-  width: 399px;
+  width: 100%;
   margin: 0 auto;
 }
-
-@media only screen and (min-width: 400px) {
+@media (min-width: 400px) {
   .gridrow {
     width: 400px;
-    margin: 0 auto;
   }
 }
-@media only screen and (min-width: 800px) {
+@media (min-width: 800px) {
   .gridrow {
     width: 800px;
-    margin: 0 auto;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .gridrow {
     width: 1200px;
-    margin: 0 auto;
   }
 }
+
 .gridrowfull .col1BP1, .gridrow .col1BP1 {
   box-sizing: border-box;
   width: 25%;
   float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.gridrowfull .col1BP1NonFloat, .gridrow .col1BP1NonFloat {
+  box-sizing: border-box;
+  width: 25%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.gridrowfull .col1BP1Flex, .gridrow .col1BP1Flex {
+  box-sizing: border-box;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.gridrowfull .col1BP1FlexColumn, .gridrow .col1BP1FlexColumn {
+  box-sizing: border-box;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .gridrowfull .offset1, .gridrow .offset1 {
   margin-left: 25%;
@@ -386,6 +460,30 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   box-sizing: border-box;
   width: 50%;
   float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.gridrowfull .col2BP1NonFloat, .gridrow .col2BP1NonFloat {
+  box-sizing: border-box;
+  width: 50%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.gridrowfull .col2BP1Flex, .gridrow .col2BP1Flex {
+  box-sizing: border-box;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.gridrowfull .col2BP1FlexColumn, .gridrow .col2BP1FlexColumn {
+  box-sizing: border-box;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .gridrowfull .offset2, .gridrow .offset2 {
   margin-left: 50%;
@@ -394,6 +492,30 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   box-sizing: border-box;
   width: 75%;
   float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.gridrowfull .col3BP1NonFloat, .gridrow .col3BP1NonFloat {
+  box-sizing: border-box;
+  width: 75%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.gridrowfull .col3BP1Flex, .gridrow .col3BP1Flex {
+  box-sizing: border-box;
+  width: 75%;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.gridrowfull .col3BP1FlexColumn, .gridrow .col3BP1FlexColumn {
+  box-sizing: border-box;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .gridrowfull .offset3, .gridrow .offset3 {
   margin-left: 75%;
@@ -402,6 +524,30 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   box-sizing: border-box;
   width: 100%;
   float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.gridrowfull .col4BP1NonFloat, .gridrow .col4BP1NonFloat {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.gridrowfull .col4BP1Flex, .gridrow .col4BP1Flex {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.gridrowfull .col4BP1FlexColumn, .gridrow .col4BP1FlexColumn {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .gridrowfull .offset4, .gridrow .offset4 {
   margin-left: 100%;
@@ -582,6 +728,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   .gridrowfull .col1, .gridrow .col1 {
     box-sizing: border-box;
     width: 8.3333333333%;
+    display: block;
     float: left;
     padding-left: 15px;
     padding-right: 15px;
@@ -592,6 +739,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   .gridrowfull .col2, .gridrow .col2 {
     box-sizing: border-box;
     width: 16.6666666667%;
+    display: block;
     float: left;
     padding-left: 15px;
     padding-right: 15px;
@@ -602,6 +750,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   .gridrowfull .col3, .gridrow .col3 {
     box-sizing: border-box;
     width: 25%;
+    display: block;
     float: left;
     padding-left: 15px;
     padding-right: 15px;
@@ -612,6 +761,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   .gridrowfull .col4, .gridrow .col4 {
     box-sizing: border-box;
     width: 33.3333333333%;
+    display: block;
     float: left;
     padding-left: 15px;
     padding-right: 15px;
@@ -622,6 +772,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   .gridrowfull .col5, .gridrow .col5 {
     box-sizing: border-box;
     width: 41.6666666667%;
+    display: block;
     float: left;
     padding-left: 15px;
     padding-right: 15px;
@@ -632,6 +783,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   .gridrowfull .col6, .gridrow .col6 {
     box-sizing: border-box;
     width: 50%;
+    display: block;
     float: left;
     padding-left: 15px;
     padding-right: 15px;
@@ -642,6 +794,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   .gridrowfull .col7, .gridrow .col7 {
     box-sizing: border-box;
     width: 58.3333333333%;
+    display: block;
     float: left;
     padding-left: 15px;
     padding-right: 15px;
@@ -652,6 +805,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   .gridrowfull .col8, .gridrow .col8 {
     box-sizing: border-box;
     width: 66.6666666667%;
+    display: block;
     float: left;
     padding-left: 15px;
     padding-right: 15px;
@@ -662,6 +816,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   .gridrowfull .col9, .gridrow .col9 {
     box-sizing: border-box;
     width: 75%;
+    display: block;
     float: left;
     padding-left: 15px;
     padding-right: 15px;
@@ -672,6 +827,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   .gridrowfull .col10, .gridrow .col10 {
     box-sizing: border-box;
     width: 83.3333333333%;
+    display: block;
     float: left;
     padding-left: 15px;
     padding-right: 15px;
@@ -682,6 +838,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   .gridrowfull .col11, .gridrow .col11 {
     box-sizing: border-box;
     width: 91.6666666667%;
+    display: block;
     float: left;
     padding-left: 15px;
     padding-right: 15px;
@@ -692,6 +849,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   .gridrowfull .col12, .gridrow .col12 {
     box-sizing: border-box;
     width: 100%;
+    display: block;
     float: left;
     padding-left: 15px;
     padding-right: 15px;
@@ -737,6 +895,26 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   }
 }
 
+/*@mixin mx-line-height($gridwidth, $gridgutter){
+    @if($gridwidth == $gridwidth-l0){
+        line-height: $gridgutter;
+    }
+    @if($gridwidth == $gridwidth-l1){
+        @media only screen and (min-width: $gridwidth){
+            line-height: $gridgutter;
+        }
+    }
+    @if($gridwidth == $gridwidth-l2){
+        @media only screen and (min-width: $gridwidth){
+            line-height: $gridgutter;
+        }
+    }
+    @if($gridwidth == $gridwidth-l3){
+        @media only screen and (min-width: $gridwidth){
+            line-height: $gridgutter;
+        }
+    }
+}*/
 body > header {
   height: 100vh;
   background-image: url(../imgs/header.jpg);
@@ -744,12 +922,8 @@ body > header {
   background-position: right center;
   background-repeat: no-repeat;
 }
-body > header nav {
-  padding-top: 45px;
-}
 body > header nav a {
   text-decoration: none;
-  line-height: 30px;
   color: #000;
 }
 body > header nav a.logo {
@@ -825,8 +999,38 @@ body > header .textoverlay h1, body > header .textoverlay h3 {
   margin: 0;
 }
 
+body > header nav {
+  padding-top: 30px;
+}
+body > header nav a {
+  line-height: 10px;
+}
+
+@media only screen and (min-width: 400px) {
+  body > header nav {
+    padding-top: 15px;
+  }
+  body > header nav a {
+    line-height: 10px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  body > header nav {
+    padding-top: 30px;
+  }
+  body > header nav a {
+    line-height: 20px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  body > header nav {
+    padding-top: 45px;
+  }
+  body > header nav a {
+    line-height: 30px;
+  }
+}
 .aboutline1 {
-  margin-top: 120px;
   position: relative;
   z-index: 2;
 }
@@ -840,30 +1044,38 @@ body > header .textoverlay h1, body > header .textoverlay h3 {
 .aboutline2 {
   position: relative;
   z-index: 1;
-  top: -120px;
 }
 
 #services h2 {
   margin: 0;
 }
-#services .serviceslist {
-  margin-top: 90px;
+#services {
+  margin-top: 140px;
 }
 #services H2 {
   font-size: 56px;
 }
 
 @media only screen and (min-width: 400px) {
+  #services {
+    margin-top: 0px;
+  }
   #services H2 {
     font-size: 30px;
   }
 }
 @media only screen and (min-width: 800px) {
+  #services {
+    margin-top: 0px;
+  }
   #services H2 {
     font-size: 60px;
   }
 }
 @media only screen and (min-width: 1200px) {
+  #services {
+    margin-top: 0px;
+  }
   #services H2 {
     font-size: 90px;
   }
@@ -906,6 +1118,44 @@ body > header .textoverlay h1, body > header .textoverlay h3 {
     font-size: 64px;
   }
 }
+#about .aboutline2 {
+  top: -10px;
+}
+
+@media only screen and (min-width: 400px) {
+  #about .aboutline2 {
+    top: -40px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  #about .aboutline2 {
+    top: -80px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #about .aboutline2 {
+    top: -120px;
+  }
+}
+#about .aboutline1 {
+  margin-top: 10px;
+}
+
+@media only screen and (min-width: 400px) {
+  #about .aboutline1 {
+    margin-top: 40px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  #about .aboutline1 {
+    margin-top: 80px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #about .aboutline1 {
+    margin-top: 120px;
+  }
+}
 #about .aboutline1 h4 {
   font-size: 30px;
   margin-bottom: 60px;
@@ -929,28 +1179,91 @@ body > header .textoverlay h1, body > header .textoverlay h3 {
     margin-bottom: 60px;
   }
 }
-.imggrid {
-  margin-top: 120px;
+#services .serviceslist {
+  margin-top: 30px;
+}
+#services .serviceslist p {
+  font-size: 18px;
+  text-align: center;
 }
 
-#clients {
-  margin-top: 120px;
+.imggrid {
+  margin-top: 40px;
+}
+
+@media only screen and (min-width: 400px) {
+  .imggrid {
+    margin-top: 40px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .imggrid {
+    margin-top: 80px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .imggrid {
+    margin-top: 120px;
+  }
 }
 #clients h2 {
   margin: 0;
 }
-#clients .clientslist {
-  margin-top: 60px;
-}
 #clients .clientslist img {
   box-sizing: border-box;
-  padding: 15px;
   opacity: 0.4;
 }
 #clients .clientslist img:hover {
   opacity: 1;
 }
 
+#clients {
+  margin-top: 40px;
+}
+
+.clientslist {
+  margin-top: 20px;
+}
+.clientslist img {
+  padding: 5px;
+}
+
+@media only screen and (min-width: 400px) {
+  #clients {
+    margin-top: 40px;
+  }
+
+  .clientslist {
+    margin-top: 20px;
+  }
+  .clientslist img {
+    padding: 5px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  #clients {
+    margin-top: 80px;
+  }
+
+  .clientslist {
+    margin-top: 40px;
+  }
+  .clientslist img {
+    padding: 10px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #clients {
+    margin-top: 120px;
+  }
+
+  .clientslist {
+    margin-top: 60px;
+  }
+  .clientslist img {
+    padding: 15px;
+  }
+}
 #clients H2 {
   font-size: 56px;
 }
@@ -970,154 +1283,67 @@ body > header .textoverlay h1, body > header .textoverlay h3 {
     font-size: 90px;
   }
 }
-@media only screen and (max-width: 399px) {
-  #contacts {
-    margin-top: 154px;
-    background-color: #F3F3F3;
-  }
-  #contacts > .col4BP1.formcontainer {
-    padding-right: 16px;
-  }
-  #contacts > .col4BP1.formcontainer .form {
-    display: block;
-    float: right;
-    padding-bottom: 20px;
-  }
-  #contacts > .col4BP1.formcontainer .form form h2 {
-    font-size: 56px;
-    margin: 30px 0 0;
-  }
-  #contacts > .col4BP1.formcontainer .form form p {
-    font-size: 18px;
-    color: #777;
-    margin: 33px 0 41px 0;
-  }
-  #contacts > .col4BP1.formcontainer .form form input {
-    color: #777;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-    margin: 0 0 20px;
-    border: 2px solid #CCC;
-    width: 100%;
-    line-height: 20px;
-    padding: 21px 64px 23px 24px;
-    font-size: 16px;
-  }
-  #contacts > .col4BP1.formcontainer .form form input:focus {
-    border-color: #00BEC5;
-  }
-  #contacts > .col4BP1.formcontainer .form form textarea {
-    color: #777;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-    margin: 0 0 30px;
-    border: 2px solid #CCC;
-    width: 100%;
-    line-height: 30px;
-    padding: 21px 64px 139px 24px;
-    font-size: 16px;
-  }
-  #contacts > .col4BP1.formcontainer .form form textarea:focus {
-    border-color: #00BEC5;
-  }
-  #contacts > .col4BP1.formcontainer .form form button {
-    color: #FFF;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-    margin: 0 0 6.6666666667px;
-    background-color: #E7194F;
-    text-transform: uppercase;
-    line-height: 22px;
-    padding: 17px 10px;
-    border: none;
-    cursor: pointer;
-  }
-  #contacts > .col4BP1.formcontainer .form form button:hover {
-    background-color: #00BEC5;
-  }
-  #contacts > .col4BP1#map {
-    background-image: url(../imgs/map.JPG);
-    background-size: cover;
-    background-position: right top;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 307px;
-  }
+#contacts {
+  margin-top: 90px;
+  background-color: #F3F3F3;
+  display: block;
 }
-@media only screen and (min-width: 800px) {
-  #contacts {
-    margin-top: 60px;
-    background-color: #F3F3F3;
-    display: flex;
-  }
-  #contacts > .col8BP3.formcontainer {
-    padding-right: 10px;
-  }
-  #contacts > .col8BP3.formcontainer .form {
-    display: block;
-    float: right;
-    width: 380px;
-    padding-bottom: 40px;
-  }
-  #contacts > .col8BP3.formcontainer .form form h2 {
-    font-size: 72px;
-    margin: 60px 0 0;
-  }
-  #contacts > .col8BP3.formcontainer .form form p {
-    color: #777;
-    margin: 30px 0;
-  }
-  #contacts > .col8BP3.formcontainer .form form input, #contacts > .col8BP3.formcontainer .form form textarea {
-    color: #777;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-    margin: 0 0 13.3333333333px;
-    border: 2px solid #CCC;
-    width: 100%;
-    line-height: 22px;
-    padding: 17px 10px;
-  }
-  #contacts > .col8BP3.formcontainer .form form input:focus, #contacts > .col8BP3.formcontainer .form form textarea:focus {
-    border-color: #00BEC5;
-  }
-  #contacts > .col8BP3.formcontainer .form form button {
-    color: #FFF;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-    margin: 0 0 13.3333333333px;
-    background-color: #E7194F;
-    text-transform: uppercase;
-    line-height: 22px;
-    padding: 17px 20px;
-    border: none;
-    cursor: pointer;
-  }
-  #contacts > .col8BP3.formcontainer .form form button:hover {
-    background-color: #00BEC5;
-  }
-  #contacts > .col8BP3#map {
-    background-image: url(../imgs/map.JPG);
-    background-size: cover;
-    background-position: right top;
-    background-repeat: no-repeat;
-  }
+#contacts > .col4BP1.formcontainer {
+  padding-right: 10px;
+  padding-left: 10px;
 }
-@media only screen and (min-width: 1200px) {
+#contacts > .col4BP1.formcontainer .form {
+  display: block;
+  float: right;
+  padding-bottom: 20px;
+}
+#contacts > .col4BP1.formcontainer .form form h2 {
+  font-size: 56px;
+  margin: 90px 0 0;
+}
+#contacts > .col4BP1.formcontainer .form form p {
+  margin: 45px 0;
+}
+#contacts > .col4BP1.formcontainer .form form input {
+  margin: 0 0 20px;
+  border: 2px solid #CCC;
+  width: 73%;
+  line-height: 22px;
+  padding: 21px 64px 23px 24px;
+}
+#contacts > .col4BP1.formcontainer .form form input:focus {
+  border-color: #00BEC5;
+}
+#contacts > .col4BP1.formcontainer .form form textarea {
+  margin: 0 0 20px;
+  border: 2px solid #CCC;
+  width: 73%;
+  line-height: 22px;
+  padding: 21px 64px 139px 24px;
+}
+#contacts > .col4BP1.formcontainer .form form textarea:focus {
+  border-color: #00BEC5;
+}
+#contacts > .col4BP1.formcontainer .form form button {
+  background-color: #E7194F;
+  text-transform: uppercase;
+  line-height: 22px;
+  padding: 17px 30px;
+  border: none;
+  cursor: pointer;
+}
+#contacts > .col4BP1.formcontainer .form form button:hover {
+  background-color: #00BEC5;
+}
+#contacts > .col4BP1#map {
+  background-image: url(../imgs/map.JPG);
+  background-size: cover;
+  background-position: right top;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 307px;
+}
+@media (min-width: 1200px) {
   #contacts {
     margin-top: 90px;
     background-color: #F3F3F3;
@@ -1137,16 +1363,9 @@ body > header .textoverlay h1, body > header .textoverlay h3 {
     margin: 90px 0 0;
   }
   #contacts > .col6.formcontainer .form form p {
-    color: #777;
     margin: 45px 0;
   }
   #contacts > .col6.formcontainer .form form input, #contacts > .col6.formcontainer .form form textarea {
-    color: #777;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;
     margin: 0 0 20px;
     border: 2px solid #CCC;
     width: 100%;
@@ -1157,12 +1376,6 @@ body > header .textoverlay h1, body > header .textoverlay h3 {
     border-color: #00BEC5;
   }
   #contacts > .col6.formcontainer .form form button {
-    color: #FFF;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;
     margin: 0 0 20px;
     background-color: #E7194F;
     text-transform: uppercase;
@@ -1179,49 +1392,134 @@ body > header .textoverlay h1, body > header .textoverlay h3 {
     background-size: cover;
     background-position: right top;
     background-repeat: no-repeat;
+    width: inherit;
+    height: auto;
   }
 }
+
+/*
+#contacts{
+    margin-top: $gridgutter * 3;
+    background-color: $graylight;
+    //display: flex;
+    > .col6{
+        &.formcontainer{
+            padding-right: $gridgutter / 2;
+            .form{
+                display: block;
+                float: right;
+                width: $gridwidth / 2 - $gridgutter;
+                padding-bottom: $gridgutter * 2;
+                form{
+                    h2{
+                        //font-size: 72px;
+                        margin: $gridgutter * 3 0 0;
+                    }
+                    p{
+                        @extend .graydark;
+                        margin: $gridgutter * 1.5 0;
+                    }
+                    input, textarea{
+                        @extend .graydark;
+                        @extend .animate;
+                        margin: 0 0 $gridgutter / 3 * 2;
+                        border:$formborderwidth solid $gray;
+                        width: 100%;
+                        line-height: $formlineheight;
+                        padding: ((64 - $formlineheight) / 2 - ($formborderwidth * 2)) $gridgutter / 2;
+                        &:focus{
+                            border-color: $secondary;
+                        }
+                    }
+                    button{
+                        @extend .white;
+                        @extend .animate;
+                        margin: 0 0 $gridgutter / 3 * 2;
+                        background-color: $primary;
+                        text-transform: uppercase;
+                        line-height: $formlineheight;
+                        padding: ((64 - $formlineheight) / 2 - ($formborderwidth * 2)) $gridgutter;
+                        border: none;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: $secondary;
+                        }
+                    }
+                }
+            }
+        }
+        &#map{
+            background-image: url(../imgs/map.JPG);
+            background-size: cover;
+            background-position: right top;
+            background-repeat: no-repeat;
+        }
+    }
+}
+*/
 footer {
   background-image: url(../imgs/bgfooter.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  padding: 60px;
+  /*p{
+      margin: $gridgutter 0;
+  }*/
 }
 footer h2 {
   margin: 0;
-}
-footer p {
-  margin: 30px 0;
 }
 footer a {
   text-decoration: none;
   font-size: 32px;
   display: inline-block;
-  padding: 7.5px;
 }
 footer a:hover {
   color: #E7194F;
   text-decoration: none;
 }
 
+footer {
+  padding: 20px;
+}
 footer h2 {
   font-size: 56px;
 }
+footer a {
+  padding: 2.5px;
+}
 
 @media only screen and (min-width: 400px) {
+  footer {
+    padding: 20px;
+  }
   footer h2 {
     font-size: 72px;
+  }
+  footer a {
+    padding: 2.5px;
   }
 }
 @media only screen and (min-width: 800px) {
+  footer {
+    padding: 40px;
+  }
   footer h2 {
     font-size: 72px;
   }
+  footer a {
+    padding: 5px;
+  }
 }
 @media only screen and (min-width: 1200px) {
+  footer {
+    padding: 60px;
+  }
   footer h2 {
     font-size: 72px;
+  }
+  footer a {
+    padding: 7.5px;
   }
 }
 footer p {
